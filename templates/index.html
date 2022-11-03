@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <title>File Server</title>
+</head>
+<body>
+    <h1>Upload a new File</h1>
+    <form action="" method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input id="btn" type=submit value=Upload>
+    </form>
+    <br>
+    <!-- This is for flash error messages -->
+    {% for message in get_flashed_messages() %}
+        <h2 class="error">{{ message }}</h2>
+    {% endfor %}
+    <br>
+
+    {% if images|length > 0 %}
+        <h1> Images </h1>
+        <ul>
+        {% for image in images %}
+            <div class="obj-container">
+                <h3>{{ image }}</h3>
+                <li><a class="delete" href="{{ url_for('delete_file', name=image) }}">Delete</a> <a class="open" href="{{ url_for('download_file', name=image) }}">Open/Download</a> </li>
+            </div>
+        {% endfor %}
+        </ul>
+        <br>
+    {% endif %}
+
+    {% if ebooks|length > 0 %}
+        <h1> Books </h1>
+        <ul>
+        {% for ebook in ebooks %}
+            <div class="obj-container">
+                <h3>{{ ebook }}</h3>
+                <li><a class="delete" href="{{ url_for('delete_file', name=ebook) }}">Delete</a><a class="open" href="{{ url_for('download_file', name=ebook) }}">Open/Download</a>  </li>
+            </div>
+        {% endfor %}
+        </ul>
+        <br>
+    {% endif %}
+
+    {% if videos|length > 0 %}
+        <h1> Video's </h1>
+        <ul>
+        {% for video in videos %}
+            <div class="obj-container">
+                <h3>{{ video }}</h3>
+                <li><a class="delete" href="{{ url_for('delete_file', name=video) }}">Delete</a><a class="open" href="{{ url_for('download_file', name=video) }}">Open/Download</a> </li>
+            </div>
+        {% endfor %}
+        </ul>
+        <br>
+    {% endif %}
+
+    {% if audios|length > 0 %}
+        <h1> Audio's </h1>
+        <ul>
+        {% for audio in audios %}
+            <div class="obj-container">
+                <h3>{{ audio }}</h3>
+                <li><a class="delete" href="{{ url_for('delete_file', name=audio) }}">Delete</a><a class="open" href="{{ url_for('download_file', name=audio) }}">Open/Download</a></li>
+            </div>
+        {% endfor %}
+        </ul>
+        <br>
+    {% endif %}
+
+    {% if documents|length > 0 %}
+        <h1> Documents </h1>
+        <ul>
+        {% for document in documents %}
+            <div class="obj-container">
+                <h3>{{ document }}</h3>
+                <li><a class="delete" href="{{ url_for('delete_file', name=document) }}">Delete</a><a class="open" href="{{ url_for('download_file', name=document) }}">Open/Download</a> </li>
+            </div>
+        {% endfor %}
+        </ul>
+        <br>
+    {% endif %}
+
+    {% if others|length > 0 %}
+        <h1> Others </h1>
+        <ul>
+        {% for other in others %}
+        <div class="obj-container">
+            <h3>{{ other }}</h3>
+            <li><a class="delete" href="{{ url_for('delete_file', name=other) }}">Delete</a><a class="open" href="{{ url_for('download_file', name=other) }}">Open/Download</a></li>
+        </div>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+
+h1 {
+    padding: 5px;
+    margin-bottom: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+h2.error{
+    color: red;
+}
+
+ul {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    padding: 4px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.obj-container {
+    margin-left:5px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    border-left: 1px solid #FCF600;
+    display: block;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.obj-container h3 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.obj-container a.delete {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FF003C;
+    border: none;
+    padding: 5px;
+    margin-left: -5px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.obj-container a.open {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #56BAED;
+    padding: 5px;
+    margin-left: 20px;
+    border: none;
+    font-weight: bold;
+}
+
+form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    display: block;
+    width: 500px;
+    padding: 5px;
+}
+
+input#btn {
+    width: 100px;
+}
