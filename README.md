@@ -22,5 +22,4 @@ python fserver.py
 ```
 (python or python3, depending on your system/python downloads)
 Then with using a browser go to localhost:8080 or the ip address that is shown in the terminal and you should see this. <br>
-
-
+![ss](https://user-images.githubusercontent.com/39290867/199766982-c8e4bb01-79a5-48b5-a3eb-3922250f46a6.png)
